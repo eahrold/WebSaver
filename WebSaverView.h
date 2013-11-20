@@ -34,24 +34,31 @@
 	// Motion Sensor Related
 	int sms_type, avgx, avgy, avgz;
 
-	IBOutlet id configSheet;
+	IBOutlet NSPanel* configSheet;
+	IBOutlet NSTextField* versionLabel;
 
-	IBOutlet id versionLabel;
-
+    NSString* currentURLString;
+    
 	IBOutlet NSTextField *saverURL;
 	NSString *saverURLString;
-	
-	IBOutlet id enableReload;
-	bool enableReloadBool;
+
+    IBOutlet NSTextField *wscrollURL;
+	NSString *wscrollURLString;
+    
+    IBOutlet NSButton* wscrollEnabled;
+    BOOL wscrollEnabledBool;
+    
+	IBOutlet NSButton* enableReload;
+	BOOL enableReloadBool;
 
 	IBOutlet NSPopUpButton *reloadTime;
 	int reloadTimeFloat;
 	
-	IBOutlet id enableSMS;
-	bool enableSMSBool;
+	IBOutlet NSButton* enableSMS;
+	BOOL enableSMSBool;
 
-    IBOutlet id enableMultiMonitor;
-	bool enableMultiMonitorBool;
+    IBOutlet NSButton* enableMultiMonitor;
+	BOOL enableMultiMonitorBool;
 
 }
 @end

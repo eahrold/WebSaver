@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1050" defaultVersion="1060" identifier="macosx"/>
+        <deployment version="1050" defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
     <objects>
@@ -14,41 +14,60 @@
                 <outlet property="reloadTime" destination="187" id="200"/>
                 <outlet property="saverURL" destination="48" id="80"/>
                 <outlet property="versionLabel" destination="160" id="162"/>
+                <outlet property="wscrollEnabled" destination="TPd-Uf-5q0" id="1hn-Mp-CJg"/>
+                <outlet property="wscrollURL" destination="vAR-JX-dKW" id="XCR-zY-8jK"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="13" userLabel="Panel" customClass="NSPanel">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="13" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="361" y="237" width="584" height="270"/>
+            <rect key="contentRect" x="361" y="237" width="584" height="308"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1130"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="18">
-                <rect key="frame" x="0.0" y="0.0" width="584" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="584" height="308"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <box title="Options" borderType="line" id="153">
-                        <rect key="frame" x="17" y="57" width="550" height="142"/>
+                        <rect key="frame" x="17" y="45" width="550" height="192"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="548" height="126"/>
+                            <rect key="frame" x="1" y="1" width="548" height="176"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button id="233">
                                     <rect key="frame" x="268" y="30" width="264" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="check" title="Pass multi-monitor information as URL query" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="234">
+                                    <buttonCell key="cell" type="check" title="Pass multi-monitor information as URL query" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="234">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
                                 </button>
                                 <button id="217">
-                                    <rect key="frame" x="210" y="12" width="322" height="18"/>
+                                    <rect key="frame" x="210" y="10" width="322" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="check" title="Send motion sensor information to page as cursor input" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="232">
+                                    <buttonCell key="cell" type="check" title="Send motion sensor information to page as cursor input" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="232">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                </button>
+                                <textField verticalHuggingPriority="750" id="vAR-JX-dKW">
+                                    <rect key="frame" x="114" y="94" width="416" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="http://wscroll.server.address" drawsBackground="YES" id="q9r-RR-SAF">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <button id="TPd-Uf-5q0">
+                                    <rect key="frame" x="10" y="95" width="98" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="check" title="Use Wscroll:" bezelStyle="regularSquare" imagePosition="left" inset="2" id="XBf-z5-Mid">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
                                     </buttonCell>
                                 </button>
                             </subviews>
@@ -85,16 +104,16 @@ Gw
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" id="46">
-                        <rect key="frame" x="29" y="140" width="38" height="17"/>
+                        <rect key="frame" x="29" y="178" width="59" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="URL:" id="224">
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Key URL:" id="224">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField toolTip="The full web URL for the page tha you want to appear as a screen saver." verticalHuggingPriority="750" id="48">
-                        <rect key="frame" x="72" y="138" width="474" height="22"/>
+                        <rect key="frame" x="104" y="176" width="442" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="225">
                             <font key="font" metaFont="system"/>
@@ -106,9 +125,9 @@ Gw
                         </connections>
                     </textField>
                     <button id="88">
-                        <rect key="frame" x="250" y="109" width="165" height="18"/>
+                        <rect key="frame" x="250" y="96" width="165" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Automatically reload page" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="226">
+                        <buttonCell key="cell" type="check" title="Automatically reload page" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="226">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="smallSystem"/>
                         </buttonCell>
@@ -117,7 +136,7 @@ Gw
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" id="145">
-                        <rect key="frame" x="374" y="207" width="193" height="22"/>
+                        <rect key="frame" x="374" y="245" width="193" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="http://code.google.com/p/websaver" allowsEditingTextAttributes="YES" id="227">
                             <font key="font" metaFont="system"/>
@@ -126,7 +145,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="151">
-                        <rect key="frame" x="20" y="207" width="174" height="43"/>
+                        <rect key="frame" x="20" y="245" width="174" height="43"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="left" title="WebSaver" allowsEditingTextAttributes="YES" id="228">
                             <font key="font" size="36" name="Times-Bold"/>
@@ -135,7 +154,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="154">
-                        <rect key="frame" x="355" y="223" width="212" height="22"/>
+                        <rect key="frame" x="355" y="261" width="212" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="right" title=" Copyright ©2010 Gavin Brock" allowsEditingTextAttributes="YES" id="229">
                             <font key="font" metaFont="system"/>
@@ -144,7 +163,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="160">
-                        <rect key="frame" x="83" y="5" width="31" height="17"/>
+                        <rect key="frame" x="83" y="24" width="31" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.0" id="230">
                             <font key="font" metaFont="system"/>
@@ -153,7 +172,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <popUpButton verticalHuggingPriority="750" id="187">
-                        <rect key="frame" x="412" y="106" width="137" height="22"/>
+                        <rect key="frame" x="412" y="93" width="137" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" id="231">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -176,7 +195,7 @@ Gw
                         </popUpButtonCell>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="LMs-1v-AiP">
-                        <rect key="frame" x="179" y="228" width="81" height="17"/>
+                        <rect key="frame" x="179" y="266" width="81" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="With Wscroll" id="Cti-Jn-7Bn">
                             <font key="font" metaFont="system"/>
@@ -185,7 +204,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qtd-JB-H08">
-                        <rect key="frame" x="29" y="5" width="55" height="17"/>
+                        <rect key="frame" x="29" y="24" width="55" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version:" id="q7O-g2-8pJ">
                             <font key="font" metaFont="system"/>
