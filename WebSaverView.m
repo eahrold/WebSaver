@@ -349,7 +349,7 @@ static NSString * upArrow, *downArrow, *leftArrow, *rightArrow;
     reloadTimeFloat         = reloadTime.selectedItem.tag;
 
     if(wscrollEnabledBool){
-        webPageList = [self getListFromServer:wscrollURL.stringValue];
+        webPageList = [self getListFromServer:wscrollURLString];
 	}
     
     // Save the Settings
@@ -362,7 +362,9 @@ static NSString * upArrow, *downArrow, *leftArrow, *rightArrow;
 	[defaults setFloat:reloadTimeFloat       forKey:@"ReloadTime"];
 	[defaults setBool:enableSMSBool          forKey:@"EnableSMS"];
 	[defaults setBool:enableMultiMonitorBool forKey:@"EnableMultiMonitor"];
-    [defaults setObject:webPageList          forKey:@"webPageList"];
+    
+    if(webPageList)[defaults setObject:webPageList forKey:@"webPageList"];
+    
     [defaults synchronize];
 	
 	// Reload the page and reset load time 
@@ -393,6 +395,10 @@ static NSString * upArrow, *downArrow, *leftArrow, *rightArrow;
 {
 	DLog(@"IBAction:enableClick");
 	[reloadTime setEnabled:[enableReload state]];
+}
+
+-(IBAction)enableWscrollClicked:(id)sender{
+    [wscrollURL setEnabled:wscrollEnabled.state];
 }
 
 - (BOOL)hasConfigureSheet

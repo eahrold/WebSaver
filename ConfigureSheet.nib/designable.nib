@@ -53,15 +53,6 @@
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="vAR-JX-dKW">
-                                    <rect key="frame" x="114" y="94" width="416" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="http://wscroll.server.address" drawsBackground="YES" id="q9r-RR-SAF">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
                                 <button id="TPd-Uf-5q0">
                                     <rect key="frame" x="10" y="95" width="98" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -69,6 +60,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="enableWscrollClicked:" target="-2" id="fZU-Or-SVC"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </view>
@@ -110,6 +104,15 @@ Gw
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="vAR-JX-dKW" userLabel="Text Field - wscroll URL:">
+                        <rect key="frame" x="130" y="140" width="416" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="http://wscroll.server.address" drawsBackground="YES" id="q9r-RR-SAF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField toolTip="The full web URL for the page tha you want to appear as a screen saver." verticalHuggingPriority="750" id="48">
